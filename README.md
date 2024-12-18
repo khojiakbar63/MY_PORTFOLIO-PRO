@@ -1,53 +1,86 @@
-# React + TypeScript + Vite
+![alt text](portfolio-1.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# My Portfolio
 
-Currently, two official plugins are available:
+Welcome to my portfolio project! This project showcases my work as a junior full-stack developer, highlighting my skills in building dynamic web applications using modern technologies like React, Next.js, Express.js, and MongoDB. Although I am still gaining experience, I am passionate about coding and eager to grow in the field of software development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Responsive Design**: Optimized for all devices, including desktops, tablets, and smartphones.
+- **Dynamic Animations**: Smooth transitions and interactive elements for a better user experience.
+- **Modern Tech Stack**: Built using React, Next.js, and Express.js with MongoDB as the database.
+- **Reusable Components**: Clean and modular code structure for easier maintenance and scalability.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- **Frontend**: React, Next.js, TypeScript, SCSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Icons**: React Icons
+- **Build Tools**: Vite
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+To run this project locally, follow these steps:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/khojiakbar63/MY_PORTFOLIO-PRO.git
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# MY_PORTFOLIO-PRO
-# MY_PORTFOLIO-PRO
-# MY_PORTFOLIO-PRO
+2. Navigate to the project directory:
+   ```bash
+   cd MY_PORTFOLIO-PRO
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and go to:
+   ```
+   http://localhost:3000
+   ```
+
+## Deployment
+
+This project is deployed on Vercel. You can view the live site here: [My Portfolio](https://myportfolio.vercel.app)
+
+## Issues and Solutions
+
+### 1. **Module Not Found**
+   - Ensure that all dependencies are installed by running `npm install`.
+   - If you're using `react-icons`, make sure to include the correct import paths.
+
+### 2. **TypeScript Errors**
+   - Install missing type definitions:
+     ```bash
+     npm install --save-dev @types/node
+     ```
+
+### 3. **Build Errors on Vercel**
+   - Double-check that all modules are included in `package.json`.
+   - Ensure the correct Node.js version is specified in the `.nvmrc` file or Vercel settings.
+
+## Roadmap
+
+- Add new sections for projects and achievements.
+- Improve performance and SEO.
+- Integrate a blog for sharing insights and tutorials.
+
+## Contact
+
+Feel free to reach out if you have any questions or collaboration opportunities:
+
+- **Email**: khojiakbar.abdulakhatov@gmail.com
+- **LinkedIn**: [Khojiakbar Abdulakhatov](https://www.linkedin.com/in/xojiakbar-abdulaxatov-b7aa31316/)
+- **GitHub**: [khojiakbar63](https://github.com/khojiakbar63)
+
+Thank you for visiting my portfolio!
+
