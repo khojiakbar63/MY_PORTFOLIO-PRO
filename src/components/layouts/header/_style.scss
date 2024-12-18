@@ -1,20 +1,26 @@
 .header {
   background-color: #1a1a1d;
   padding: 40px 0;
+
   .wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
     .logo {
       font-family: "Kode Mono", monospace;
       display: flex;
       gap: 10px;
       align-items: center;
+
       &-title {
         font-size: 34px;
         font-weight: 700;
         margin-top: 5px;
         color: #fff;
         text-decoration: none;
+
         &-dot {
           color: #00ffab;
           font-size: 32px;
@@ -29,30 +35,36 @@
       align-items: center;
       margin-left: auto;
       list-style-type: none;
+
       .item {
         &:hover {
           cursor: pointer;
         }
+
         .link {
-          padding: 10px 0px;
+          padding: 10px 0;
           text-decoration: none;
           font-weight: bold;
           color: #fff;
+
           &:hover {
             color: #00ffab;
           }
         }
+
         .active {
           border-bottom: 2.5px solid #00ffab;
           color: #00ffab !important;
         }
       }
+
       .hire-me {
         font-family: "Syne Mono", monospace;
         padding: 10px 20px;
         border: 2px solid #00ffab;
         border-radius: 5px;
         font-weight: bold;
+
         &:hover {
           cursor: pointer;
           background-color: #00ffaac2;
@@ -66,27 +78,117 @@
       font-size: 28px;
       margin-top: 20px;
       display: none;
-      transition: all 0.1s ease-out;
-      &:hover{
-        cursor: pointer;
-        transform: scaleX(1.1);
+      transition: all 0.2s ease-out;
+      background-color: transparent;
+      border: none;
+      outline: none;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &:active {
+        color: #00ffab;
       }
     }
   }
 }
 
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%; // Initially hidden
+  width: 70%;
+  height: 100vh;
+  background-color: #4d4da4;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: right 0.3s ease-in-out; // Smooth sliding effect
 
-// @media (max-width: 768px) {
-  .header {
-    .wrapper {
-      display: flex;
-      justify-content: space-between;
-      .list {
-        // display: none;
+  .mobile-name {
+    width: 100%;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 40% auto 100px auto;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .dot {
+      color: #00ffab;
+      font-size: 32px;
+      margin-left: 5px;
+    }
+  }
+
+  .mobile-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
+
+    .item {
+      &:hover {
+        cursor: pointer;
       }
-      .mobile-menu {
-        // display: block;
+
+      .link {
+        padding: 1px 0;
+        text-decoration: none;
+        font-weight: bold;
+        color: #fff;
+
+        &:hover {
+          color: #00ffab;
+        }
+      }
+
+      .active {
+        border-bottom: 2.5px solid #00ffab;
+        color: #00ffab !important;
       }
     }
 
+    .hire-me {
+      font-family: "Syne Mono", monospace;
+      padding: 10px 20px;
+      border: 2px solid #00ffab;
+      border-radius: 5px;
+      font-weight: bold;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #00ffaac2;
+        color: #1a1a1d;
+      }
+    }
+  }
+}
+
+.show {
+  right: 0; // Show the mobile navigation
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+  .header {
+    .wrapper {
+      .list {
+        display: none; // Hide the desktop menu
+      }
+
+      .mobile-menu {
+        display: block; // Show mobile menu icon
+      }
+    }
+  }
 }

@@ -26,7 +26,7 @@ const Home: FC = () => {
             </h1>
 
             <Paragraph
-              style={{ minHeight: "84px"}}
+              style={{ minHeight: "84px" }}
               text={
                 <TypeAnimation
                   sequence={[text, 1000]} // Passing text directly as the sequence element
@@ -66,7 +66,7 @@ const Home: FC = () => {
                   objectFit: "cover",
                   borderRadius: "50%",
                 }}
-                src="/src/assets/images/my.png"
+                src="/images/my.png"
                 alt="Profile"
                 className="my-photo"
               />
