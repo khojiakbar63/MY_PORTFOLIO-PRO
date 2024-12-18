@@ -5,7 +5,6 @@ import { RoundedBtn } from "../../ui/index";
 import { CiMenuFries } from "react-icons/ci";
 import { GrClose } from "react-icons/gr";
 
-
 import "./_style.scss";
 
 const Header: FC = () => {
