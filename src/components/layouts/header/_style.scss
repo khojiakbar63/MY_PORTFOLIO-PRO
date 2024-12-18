@@ -1,0 +1,92 @@
+.header {
+  background-color: #1a1a1d;
+  padding: 40px 0;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    .logo {
+      font-family: "Kode Mono", monospace;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      &-title {
+        font-size: 34px;
+        font-weight: 700;
+        margin-top: 5px;
+        color: #fff;
+        text-decoration: none;
+        &-dot {
+          color: #00ffab;
+          font-size: 32px;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .list {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-left: auto;
+      list-style-type: none;
+      .item {
+        &:hover {
+          cursor: pointer;
+        }
+        .link {
+          padding: 10px 0px;
+          text-decoration: none;
+          font-weight: bold;
+          color: #fff;
+          &:hover {
+            color: #00ffab;
+          }
+        }
+        .active {
+          border-bottom: 2.5px solid #00ffab;
+          color: #00ffab !important;
+        }
+      }
+      .hire-me {
+        font-family: "Syne Mono", monospace;
+        padding: 10px 20px;
+        border: 2px solid #00ffab;
+        border-radius: 5px;
+        font-weight: bold;
+        &:hover {
+          cursor: pointer;
+          background-color: #00ffaac2;
+          color: #1a1a1d;
+        }
+      }
+    }
+
+    .mobile-menu {
+      color: #00ffab;
+      font-size: 28px;
+      margin-top: 20px;
+      display: none;
+      transition: all 0.1s ease-out;
+      &:hover{
+        cursor: pointer;
+        transform: scaleX(1.1);
+      }
+    }
+  }
+}
+
+
+// @media (max-width: 768px) {
+  .header {
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      .list {
+        display: none;
+      }
+      .mobile-menu {
+        display: block;
+      }
+    }
+
+}

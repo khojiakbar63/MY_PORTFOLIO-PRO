@@ -1,0 +1,16 @@
+.rounded-btn {
+  font-family: "Kode Mono", monospace;
+  color: #000;
+  border-radius: 20px;
+  background-color: #00ffab;
+  padding: 10px 24px;
+  border: none;
+  font-size: 16px;
+  margin: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  &:hover {
+    background-color: #00e6a3;
+  }
+}
