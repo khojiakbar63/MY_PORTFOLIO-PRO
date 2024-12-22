@@ -1,0 +1,158 @@
+// HOME
+.home {
+    background-color: #1a1a1d;
+    min-height: calc(100vh - 248px);
+    color: #fff;
+    padding: 60px 0;
+    // WRAPPER
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+  
+      // HOME LEFT
+      .left {
+        width: 50%;
+        .job {
+          font-family: "Kode Mono", monospace;
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        .greeting {
+          font-size: 48px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        .actions {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          .socials {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+          }
+        }
+      }
+      // HOME RIGHT
+      // FOR PROFILE IMAGE ANIMATION AND CSS
+      .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        height: 400px;
+        width: 400px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        background: linear-gradient(#1a1a1d, #1a1a1d) padding-box,
+          linear-gradient(var(--angle), #1a1a1d, #00ffab) border-box;
+        animation: 3s rotate linear infinite;
+        position: relative; /* Required for positioning child elements */
+        overflow: hidden; /* Prevent overflow outside the box */
+  
+        .cover {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: radial-gradient(
+            circle,
+            rgba(10, 9, 9, 0.963) 30%,
+            #1a1a1d 70%,
+            transparent 100%
+          ); /* Semi-transparent shadow effect */
+          z-index: 1; /* Above my-photo */
+        }
+  
+        .my-photo {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* Ensure the image covers the box properly */
+          z-index: 0; /* Behind the shadow */
+          border-radius: 50%;
+        }
+      }
+    }
+    .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style-type: none;
+      margin-top: 60px;
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: "Kode Mono", monospace;
+        width: 200px;
+        .quantity {
+          font-size: 58px;
+          font-weight: bolder;
+        }
+        .text {
+          color: #ffffffb7;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  
+  // General styles
+  .green {
+    color: #00ffab;
+  }
+  
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+  
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  // MEDIA QUERIES
+  @media (max-width: 960px) {
+    .home {
+      padding: 40px 0;
+      .wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+        .left {
+          width: 100%;
+          text-align: center;
+          .actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+        }
+        .right {
+          width: 300px;
+          height: 300px;
+          padding: 30px;
+        }
+      }
+      .bottom {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        .item {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  

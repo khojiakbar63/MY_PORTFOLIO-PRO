@@ -1,11 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/main-layout";
-import Home from "../pages/home";
-import Services from "../pages/services";
-import Resume from "../pages/resume";
-import Work from "../pages/work";
-import Contact from "../pages/contact";
-import HireMe from "../pages/hire-me";
+import { HomePage, ServicesPage, ResumePage, WorkPage, ContactPage, HireMePage} from "../pages";
 
 const router = [
   {
@@ -14,27 +9,27 @@ const router = [
     children: [
       {
         index: true, // Default child route (renders at "/")
-        element: <Home />,
+        element: <HomePage />,
       },
       {
         path: "services", // Relative path ("/services")
-        element: <Services />,
+        element: <ServicesPage />,
       },
       {
         path: "resume", // Relative path ("/resume")
-        element: <Resume />,
+        element: <ResumePage />,
       },
       {
         path: "work", // Relative path ("/work")
-        element: <Work />,
+        element: <WorkPage />,
       },
       {
         path: "contact", // Relative path ("/contact")
-        element: <Contact />,
+        element: <ContactPage />,
       },
       {
         path: "hire-me", // Relative path ("/hire-me")
-        element: <HireMe />,
+        element: <HireMePage />,
       },
     ],
   },

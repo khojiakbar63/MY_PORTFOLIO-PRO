@@ -1,11 +1,8 @@
-import { FC } from 'react';
+import { FC } from "react";
+import { ResumeComponent } from "../../components/views";
 
-const Resume:FC = () => {
-    return (
-        <div>
-            <h1>Resume outlet</h1>
-        </div>
-    );
+const Resume: FC = () => {
+  return <ResumeComponent />;
 };
 
 export default Resume;

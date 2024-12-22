@@ -1,11 +1,8 @@
-import { FC } from 'react';
+import { FC } from "react";
+import { HireMeComponent } from "../../components/views";
 
-const HireMe:FC = () => {
-    return (
-        <div>
-            <h1>HireMe outlet</h1>
-        </div>
-    );
+const HireMe: FC = () => {
+  return <HireMeComponent />;
 };
 
 export default HireMe;

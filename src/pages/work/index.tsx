@@ -1,11 +1,8 @@
-import { FC } from 'react';
+import { FC } from "react";
+import { WorkComponent } from "../../components/views";
 
-const Work:FC = () => {
-    return (
-        <div>
-            <h1>Work outlet</h1>
-        </div>
-    );
+const Work: FC = () => {
+  return <WorkComponent />;
 };
 
 export default Work;

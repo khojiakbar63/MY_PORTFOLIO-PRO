@@ -1,11 +1,8 @@
-import { FC } from 'react';
+import { FC } from "react";
+import { ServicesComponent } from "../../components/views";
 
-const Services:FC = () => {
-    return (
-        <div>
-            <h1>Services outlet</h1>
-        </div>
-    );
+const Services: FC = () => {
+  return <ServicesComponent />;
 };
 
 export default Services;

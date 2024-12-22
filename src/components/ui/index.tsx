@@ -4,4 +4,5 @@ export {default as SwiperBtn} from '../ui/swiper-btn'
 export {default as ArrowBtn} from '../ui/arrow-btn'
 export {default as SocialBtn} from '../ui/social-btn'
 export {default as SquareBtn} from '../ui/square-btn'
+export {default as ServicesBox} from '../ui/services-box'
 

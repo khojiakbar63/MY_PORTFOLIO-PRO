@@ -1,11 +1,8 @@
-import { FC } from 'react';
+import { FC } from "react";
+import { ContactComponent } from "../../components/views";
 
-const Contact:FC = () => {
-    return (
-        <div>
-            <h1>Contact outlet</h1>
-        </div>
-    );
+const Contact: FC = () => {
+  return <ContactComponent />;
 };
 
 export default Contact;
