@@ -1,4 +1,19 @@
-
+:root {
+  /* COLORS */
+  --primary-green: #00ffab;
+  --primary-dark: #1a1a1d;
+  --primary-dark-mirror: #1f1f1f;
+  --primary-grey: #d3d3d3;
+  --primary-p:#c7c7c7a2;
+  
+  /* FONTS */
+  --font-major: "Major Mono Display", monospace;
+  --font-vt323: "VT323", monospace;
+  --font-kode-mono: "Kode Mono", monospace;
+  --font-syne-mono: "Syne Mono", monospace;
+  --font-train-one: "Train One", monospace;
+  --font-rubik-scribble: "Rubik Scribble", monospace;
+}
 
 
 * {
@@ -8,6 +23,7 @@
 
 body {
   font-family: "Major Mono Display", monospace;
+  background-color: var(--primary-dark);
   /* font-family: "VT323", monospace; */
   /* font-family: "Kode Mono", monospace; */
   /* font-family: "Syne Mono", monospace; */

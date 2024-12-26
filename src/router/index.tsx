@@ -1,6 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/main-layout";
-import { HomePage, ServicesPage, ResumePage, WorkPage, ContactPage, HireMePage} from "../pages";
+import {
+  HomePage,
+  ServicesPage,
+  ResumePage,
+  WorkPage,
+  ContactPage,
+  HireMePage,
+} from "../pages";
+import { ResumeAboutMe, ResumeEducation, ResumeExperience, ResumeSkills } from "../components/inner-views/resume";
 
 const router = [
   {
@@ -18,6 +26,24 @@ const router = [
       {
         path: "resume", // Relative path ("/resume")
         element: <ResumePage />,
+        children: [
+          {
+            path: "experience", // Relative path ("/resume/education")
+            element: <ResumeExperience/>,
+          },
+          {
+            path: "education", // Relative path ("/resume/experience")
+            element: <ResumeEducation/>,
+          },
+          {
+            path: "skills", // Relative path ("/resume/experience
+            element: <ResumeSkills/>,
+          },
+          {
+            path: "about-me", // Relative path ("/resume/experience")
+            element: <ResumeAboutMe/>,
+          }
+        ],
       },
       {
         path: "work", // Relative path ("/work")
@@ -29,7 +55,7 @@ const router = [
       },
       {
         path: "hire-me", // Relative path ("/hire-me")
-        element: <HireMePage />,
+        element: <ContactPage />,
       },
     ],
   },

@@ -1,0 +1,128 @@
+.resume {
+  background-color: var(--primary-dark);
+  min-height: calc(100vh - 128px); // Full height minus margin
+  margin-top: 128px;
+  display: flex;
+  flex-direction: column;
+
+  .wrapper {
+    padding: 70px 20px;
+    display: flex;
+    gap: 30px; // Slightly reduced gap for better spacing
+    align-items: stretch; // Ensure both sections align properly
+    justify-content: space-between;
+    flex-wrap: nowrap; // Prevent wrapping on larger screens
+
+    .selection {
+      display: flex;
+      flex-direction: column;
+      gap: 30px; // Reduced gap for better spacing
+      width: 35%; // Adjusted for better proportions
+      box-sizing: border-box;
+
+      .title {
+        font-family: var(--font-kode-mono);
+        font-size: 42px;
+        font-weight: normal;
+        color: #fff;
+        letter-spacing: 6px;
+      }
+
+      .desc {
+        font-family: var(--font-kode-mono);
+        font-size: 14px;
+        font-weight: thin;
+        color: var(--primary-grey);
+        line-height: 30px;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; // Slightly reduced gap
+      }
+    }
+
+    .display {
+      width: 60%; // Maintain 60% width
+      min-height: 400px; // Ensure consistent height
+      height: auto; // Allow content to dictate height
+      box-sizing: border-box;
+    }
+  }
+
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .wrapper {
+      flex-direction: column; // Stack sections vertically
+      align-items: center; // Center-align for better visuals
+      gap: 40px;
+
+      .selection {
+        width: 100%; // Full width for smaller screens
+        text-align: center; // Center-align text
+      }
+
+      .display {
+        width: 100%; // Full width
+        height: auto; // Let content dictate height
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .wrapper {
+      padding-top: 50px;
+
+      .selection {
+        gap: 20px;
+
+        .title {
+          font-size: 28px;
+        }
+
+        .desc {
+          font-size: 12px;
+          line-height: 24px;
+        }
+
+        .buttons {
+          gap: 16px;
+        }
+      }
+
+      .display {
+        height: auto;
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .wrapper {
+      padding-top: 30px;
+
+      .selection {
+        gap: 16px;
+
+        .title {
+          font-size: 22px;
+        }
+
+        .desc {
+          font-size: 11px;
+          line-height: 20px;
+        }
+
+        .buttons {
+          gap: 12px;
+        }
+      }
+
+      .display {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

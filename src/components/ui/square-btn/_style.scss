@@ -1,0 +1,43 @@
+.square-btn {
+  text-decoration: none;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #1f1f1f;
+  backdrop-filter: blur(10px);
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  text-align: center;
+
+  &:hover {
+    background-color: #1f1f1fa7;
+    color: #fff;
+  }
+
+  &.active {
+    background-color: var(--primary-green) !important;
+    color: #1f1f1f !important;
+  }
+
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    font-size: 13px; /* Slightly smaller font size */
+    padding: 8px 18px; /* Adjust padding for medium screens */
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px; /* Reduce font size further */
+    padding: 8px 16px; /* Adjust padding for tablets */
+    border-radius: 4px; /* Slightly smaller button corners */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 11px; /* Compact font size for small screens */
+    padding: 6px 12px; /* Reduce padding for mobile */
+    border-radius: 3px; /* Tighter button corners for mobile */
+  }
+}

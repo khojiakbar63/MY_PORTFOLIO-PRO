@@ -1,0 +1,44 @@
+.resume-experience {
+  .cards {
+    height: 410px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    overflow-y: auto;
+
+    /* Scrollbar styles */
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent; /* Track color */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--primary-green); /* Thumb color */
+      border-radius: 5px; /* Optional rounded corners */
+      width: 1px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      height: auto; /* Allow height to adjust to content */
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 16px; /* Add padding for smaller screens */
+    }
+
+    @media (max-width: 480px) {
+      height: auto;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 8px; /* Adjust padding for very small screens */
+    }
+  }
+}

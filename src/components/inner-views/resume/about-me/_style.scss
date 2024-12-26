@@ -1,0 +1,105 @@
+.resume-about-me {
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allow the lists to wrap on smaller screens */
+    justify-content: space-between;
+    padding-top: 70px;
+    gap: 20px; /* Space between the lists */
+  
+    .list {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 0;
+      width: 48%; /* Default: 48% width for each list */
+      
+      .item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .title {
+          font-size: 14px;
+          line-height: 16px;
+          color: #808080cf;
+          letter-spacing: 1px;
+
+          .info {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            margin-left: 20px;
+            letter-spacing: 1.8px;
+            word-wrap: break-word;
+          }
+        }
+      }
+    }
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .wrapper {
+      flex-direction: column; /* Stack the content on smaller screens */
+      padding-top: 50px;
+  
+      .list {
+        width: 100%; /* Full width for each list on tablets */
+        margin-top: 0;
+      }
+
+      .item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+
+        .title {
+          font-size: 13px;
+          .info {
+            font-size: 14px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .wrapper {
+      padding-top: 40px;
+
+      .list {
+        .item {
+          margin-bottom: 12px;
+
+          .title {
+            font-size: 12px;
+            .info {
+              font-size: 13px;
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .wrapper {
+      padding-top: 30px;
+
+      .list {
+        .item {
+          margin-bottom: 8px;
+
+          .title {
+            font-size: 11px;
+            .info {
+              font-size: 12px;
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

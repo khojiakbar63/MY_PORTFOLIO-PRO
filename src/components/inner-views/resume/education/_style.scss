@@ -1,0 +1,44 @@
+.resume-education {
+  .cards {
+    height: 410px; /* Ensure the container has a fixed height */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+    gap: 32px;
+    overflow-y: auto; /* Enable scrolling when content overflows */
+
+    /* Scrollbar styles */
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent; /* Track color */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--primary-green); /* Thumb color */
+      border-radius: 5px; /* Optional rounded corners */
+      width: 1px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr; /* Switch to a single column for smaller screens */
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      height: auto; /* Allow the height to adjust dynamically */
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 16px; /* Add padding for a better look */
+    }
+
+    @media (max-width: 480px) {
+      height: auto; /* Dynamic height for very small screens */
+      grid-template-columns: 1fr; /* Single column layout */
+      gap: 12px; /* Smaller gap between items */
+      padding: 8px; /* Reduce padding for compact screens */
+    }
+  }
+}

@@ -9,12 +9,13 @@ export interface IContainer{
 export interface IRoundedBtn{
     children: ReactNode;
     path: string;
+    className?: string;
   }
 
 
   export interface IParagraph{
     text: ReactNode | string | JSX.Element;
-    style: object;
+    style?: object;
   }
   export interface ISocialBtn{
     children: ReactNode;

@@ -1,0 +1,45 @@
+.resume-skills {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+    gap: 30px;
+    height: auto; /* Allow dynamic height */
+    overflow-y: auto; /* Enable scrolling if needed */
+
+    /* Scrollbar styles */
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent; /* Track color */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--primary-green); /* Thumb color */
+      border-radius: 5px; /* Rounded corners for scrollbar */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns for large tablets */
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for tablets */
+      gap: 20px;
+      padding: 16px; /* Add padding for smaller screens */
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr; /* Single column for mobile screens */
+      gap: 16px;
+      padding: 12px; /* Reduce padding for compact layout */
+    }
+
+    /* Ensure cards align centrally */
+    justify-items: center; /* Horizontally center each card */
+    align-items: center; /* Vertically center each card */
+  }
+}

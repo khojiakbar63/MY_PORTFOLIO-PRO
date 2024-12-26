@@ -1,11 +1,18 @@
-import { FC } from 'react';
+import { FC } from "react";
+import { NavLink } from "react-router-dom";
+import "./_style.scss";
 
-const index:FC = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+interface SquareBtnProps {
+  children: React.ReactNode;
+  path: string;
+  className?: string;
+}
+const SquareBtn: FC<SquareBtnProps> = ({ children, path, className }) => {
+  return (
+    <NavLink className={`square-btn ${className}`} to={path}>
+      {children}
+    </NavLink>
+  );
 };
 
-export default index;
+export default SquareBtn;

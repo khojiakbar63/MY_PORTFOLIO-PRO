@@ -1,0 +1,201 @@
+.work {
+  background-color: var(--primary-dark);
+  height: calc(100vh - 128px);
+  margin-top: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row !important;
+
+    .content {
+      width: 45%; /* Default: 50% width on desktop */
+
+      .orders {
+        font-size: 68px;
+        font-weight: 400;
+        font-family: var(--font-rubik-scribble);
+        color: #fff;
+        margin-bottom: 24px;
+      }
+
+      .project-type-title {
+        font-size: 28px;
+        font-weight: 400;
+        font-family: var(--font-rubik-scribble);
+        color: #fff;
+        margin-bottom: 24px;
+      }
+
+      .tech-list {
+        list-style-type: none;
+        display: flex;
+        gap: 12px;
+        font-family: var(--font-kode-mono);
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+        border-bottom: 0.01px solid #5f5e5e;
+
+        .item {
+          color: var(--primary-green);
+        }
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .circle-btn {
+          font-size: 24px;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: none;
+          background-color: var(--primary-dark-mirror);
+          color: #fff;
+          cursor: pointer;
+          transition: all 0.1s ease-in-out;
+
+          &:hover {
+            color: var(--primary-green);
+          }
+        }
+      }
+    }
+
+    .swiper {
+      width: 45%; /* Default: 50% width on desktop */
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// MEDIA QUERIES
+
+@media (max-width: 1200px) {
+  /* Tablet range */
+  .work {
+    height: auto;
+    padding-top: 80px;
+
+    .wrapper {
+      flex-direction: column; /* Stack content and swiper */
+      gap: 20px; /* Reduce gap for tablets */
+
+      .content {
+        width: 100%; /* Full width on tablets */
+        text-align: center;
+
+        .orders {
+          font-size: 56px; /* Slightly smaller font size */
+        }
+
+        .project-type-title {
+          font-size: 26px; /* Slightly smaller font size */
+        }
+
+        .tech-list {
+          justify-content: center;
+          flex-wrap: wrap; /* Wrap items if needed */
+          padding-bottom: 16px;
+        }
+
+        .actions {
+          justify-content: center;
+          gap: 15px;
+        }
+      }
+
+      .swiper {
+        width: 100%; /* Full width on tablets */
+        padding: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  /* Mobile range */
+  .work {
+    height: auto;
+    padding-top: 80px;
+
+    .wrapper {
+      flex-direction: column; /* Stack content and swiper */
+      gap: 20px;
+
+      .content {
+        width: 100%; /* Full width on mobile */
+        text-align: center;
+
+        .orders {
+          font-size: 48px; /* Reduce font size for smaller screens */
+        }
+
+        .project-type-title {
+          font-size: 24px; /* Reduce font size for smaller screens */
+        }
+
+        .tech-list {
+          justify-content: center;
+          flex-wrap: wrap; /* Wrap items if needed */
+          padding-bottom: 16px; /* Reduced padding */
+        }
+
+        .actions {
+          justify-content: center;
+          gap: 15px;
+        }
+      }
+
+      .swiper {
+        width: 100%; /* Full width on mobile */
+        padding: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  /* Small mobile range */
+  .work {
+    padding-top: 40px;
+
+    .wrapper {
+      gap: 10px; /* Further reduce gap on small mobile screens */
+
+      .content {
+        .orders {
+          font-size: 36px; /* Smaller font size */
+        }
+
+        .project-type-title {
+          font-size: 20px; /* Smaller font size */
+        }
+
+        .tech-list {
+          gap: 8px; /* Smaller gap */
+          padding-bottom: 12px; /* Reduce padding */
+        }
+
+        .actions {
+          gap: 10px; /* Smaller gap */
+        }
+      }
+
+      .swiper {
+        width: 100%;
+        padding: 0; /* Remove padding */
+      }
+    }
+  }
+}

@@ -1,25 +1,42 @@
 .services {
+  margin: 128px;
   background-color: #1a1a1d;
-  height: calc(100vh - 128px);
   display: flex;
   align-items: center;
+  justify-content: center; // Center content horizontally and vertically
+  padding: 20px; // Add padding for spacing instead of height constraints
+
   .wrapper {
-    height: 500px;
-    min-height: 500px;
-    overflow: scroll;
+    width: 100%; // Ensure it takes full width
+    max-width: 1200px; // Optional: Set a max width for alignment
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); // Two columns by default
     grid-gap: 52px;
-    padding: 12px;
+    padding: 20px;
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .services {
-    height: calc(100vh - 64px);
+    padding: 12px; // Reduce padding for smaller screens
+
     .wrapper {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; // Switch to a single column
+      grid-gap: 24px; // Reduce gap for spacing
+      padding: 12px; // Adjust padding for alignment
+      overflow: visible; // Ensure no overflow issues
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .services {
+    padding: 8px; // Minimal padding for compact screens
+
+    .wrapper {
+      grid-gap: 16px; // Further reduce gap
+      padding: 8px; // Compact padding for small screens
+      overflow: visible; // Ensure no overflow
     }
   }
 }

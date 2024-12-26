@@ -1,0 +1,31 @@
+.resume-card{
+    background-color: #1f1f1f;
+    max-width: 100%;
+    padding: 32px 32px 28px;
+    border-radius: 0.5rem;
+
+    .date{
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: var(--primary-green);
+        margin-bottom: 0.5rem;
+    }
+    .title{
+        font-size: 22px !important;
+        font-weight: bold;
+        letter-spacing: 1.4px !important;
+        word-spacing: 8px;
+        color: #fff;
+        margin-bottom: 24px;
+    }
+    .desc{
+        font-size: 14px !important;
+        font-weight: bold;
+        letter-spacing: 1.4px;
+        color: #fff;
+    }
+   
+    
+
+}

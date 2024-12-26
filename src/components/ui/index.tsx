@@ -5,4 +5,7 @@ export {default as ArrowBtn} from '../ui/arrow-btn'
 export {default as SocialBtn} from '../ui/social-btn'
 export {default as SquareBtn} from '../ui/square-btn'
 export {default as ServicesBox} from '../ui/services-box'
+export {default as ResumeCard} from '../ui/resume-primary-card'
+export {default as TechsCard} from '../ui/techs-card'
+export {default as CubeBadge} from '../ui/cube-badge'
 
