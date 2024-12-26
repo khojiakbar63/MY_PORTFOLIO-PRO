@@ -5,8 +5,7 @@ import {
   ServicesPage,
   ResumePage,
   WorkPage,
-  ContactPage,
-  HireMePage,
+  ContactPage
 } from "../pages";
 import { ResumeAboutMe, ResumeEducation, ResumeExperience, ResumeSkills } from "../components/inner-views/resume";
 
